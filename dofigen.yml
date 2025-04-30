@@ -1,0 +1,35 @@
+builders:
+  gradle:
+    fromImage: gradle:jdk21
+    workdir: /app
+    bind:
+      - build.gradle
+      - settings.gradle
+      - gradle/
+      - src/
+    run:
+      # Build the Spring Boot jar
+      - gradle clean bootJar
+      # Move the jar to a known location
+      - mv build/libs/*.jar /tmp/app.jar
+    cache:
+      # Gradle cache
+      - /home/gradle/.gradle
+      # Build cache
+      - /app/build
+
+# Runtime
+fromImage: bitnami/java:21
+workdir: /app
+copy:
+  - fromBuilder: gradle
+    paths: "/tmp/app.jar"
+    target: "/app/app.jar"
+entrypoint: java
+cmd: -jar /app/app.jar
+context:
+  - "/src"
+  - "/build.gradle"
+  - "/settings.gradle"
+  - "/gradle"
+  
