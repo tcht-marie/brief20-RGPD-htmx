@@ -3,8 +3,8 @@ import "https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookiecon
 CookieConsent.run({
     categories: {
         necessary: {
-            enabled: true, // this category is enabled by default
-            readOnly: true, // this category cannot be disabled
+            enabled: true,
+            readOnly: true,
         },
     },
     language: {
@@ -32,7 +32,35 @@ CookieConsent.run({
                         {
                             "title": "Cookies strictement nécessaires",
                             "description": "Ces cookies sont essentiels au bon fonctionnement du site web. Sans eux, le site ne fonctionnerait pas correctement.Nous avons besoin de collecter et stocker vos informations personnelles telles que votre adresse mail, votre nom complet, votre mot de passe chiffré, votre photo de profil si vous en télécharger une, votre les informations de votre profil, votre rôle et votre identifiant de connection. Nous stockons également les notifications que vous recevez ainsi que les rendez-vous pris. Enfin, les documents que vous importez sur le site sont aussi stockés.",
-                            "linkedCategory": "necessary"
+                            "linkedCategory": "necessary",
+                            "cookieTable": {
+                                "headers": {
+                                    "name": "Name",
+                                    "Service": "Service",
+                                    "description": "Description",
+                                    "expiration": "Expiration",
+                                },
+                                "body": [
+                                    {
+                                        "name": "Données personnelles",
+                                        "Service": "necessary",
+                                        "description": "Votre email, nom complet, mot de passe chiffré, photo de profil, informations de votre profil, rôle et identifiant de connexion sont utilisés pour votre connexion et navigation sur le site.",
+                                        "expiration": "Jusqu'à la suppression de votre compte."
+                                    },
+                                    {
+                                        "name": "Notifications",
+                                        "Service": "necessary",
+                                        "description": "Les notifications sont stockés pour que nous puissions vous les afficher dans le site.",
+                                        "expiration": "Jusqu'à la suppression de votre compte."
+                                    },
+                                    {
+                                        "name": "Documents",
+                                        "Service": "necessary",
+                                        "description": "Les documents sont stockés pour que nous puissions vous les afficher dans le site et que vous puissiez les télécharger.",
+                                        "expiration": "Jusqu'à la suppression de votre compte."
+                                    },
+                                ],
+                            }
                         },
                         {
                             "title": "Plus d'informations",
