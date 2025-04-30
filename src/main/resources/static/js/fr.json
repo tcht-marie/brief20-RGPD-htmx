@@ -1,0 +1,31 @@
+{
+  "consentModal": {
+    "title": "Consentements",
+    "description": "Nous utilisons les cookies",
+    "acceptAllBtn": "Tout accepter",
+    "acceptNecessaryBtn": "Tout rejeter",
+    "showPreferencesBtn": "Configurer mes préférences"
+  },
+  "preferencesModal": {
+    "title": "Préférences de cookies",
+    "acceptAllBtn": "Tout accepter",
+    "acceptNecessaryBtn": "Tout rejeter",
+    "savePreferencesBtn": "Sauvegarder mes préférences",
+    "closeIconLabel": "Fermer",
+    "sections": [
+      {
+        "title": "Utilisation des cookies",
+        "description": "Nous utilisons des cookies pour assurer les fonctionnalités de base du site Web et pour améliorer votre expérience en ligne."
+      },
+      {
+        "title": "Cookies strictement nécessaires",
+        "description": "Ces cookies sont essentiels au bon fonctionnement du site web. Sans eux, le site ne fonctionnerait pas correctement.Nous avons besoin de collecter et stocker vos informations personnelles telles que votre prénom, votre nom, votre adresse mail, votre numéro de téléphone, votre photo de profil si vous en télécharger une, votre adresse de domiciliation ainsi que l'adresse de votre lieu de travail. Nous stockons aussi les trajets que vous enregistrez dans le site avec la date, l'heure de départ, l'adresse de départ et d'arrivée du trajet. Enfin, les commentaires que vous mettrez en ligne concernant votre profil.",
+        "linkedCategory": "necessary"
+      },
+      {
+        "title": "Plus d'informations",
+        "description": "Pour toute question relative à notre politique en matière de cookies et à vos choix, veuillez <a class=\"cc-link\" href=\"#yourdomain.com\">nous contacter</a>."
+      }
+    ]
+  }
+}
